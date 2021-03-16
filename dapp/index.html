@@ -1,0 +1,563 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="static/hui/css/hui.css" />
+<link rel="stylesheet" type="text/css" href="static/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+<script src="static/js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/js/vue.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/hui/js/hui.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+<title>WEBIT.CASH DAPPS</title>
+</head>
+<body>
+<div id="app">
+<div class="langbtn"><span id="langbtn">{{langs.setlang}}</span></div>
+<div class="toplogo">{{langs.top[0]}}</div>
+<div class="startbox">
+	<div onclick="gettronweb()" class="startbtn">
+		<span>{{langs.top[1]}}</span>
+		<i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+	</div>
+</div>
+
+<div class="menubox">
+	<div @click="menushow(0)" id="menupool" :style="{backgroundColor:'#E65100'}">{{langs.menu[0]}}</div>
+	<div @click="menushow(1)" id="menureward" :style="{backgroundColor:'#1B5E20'}">{{langs.menu[1]}}</div>
+	<div @click="menushow(2)" id="menuswap" :style="{backgroundColor:'#0D47A1'}">{{langs.menu[2]}}</div>
+	<div @click="menushow(3)" id="menuinfos" :style="{backgroundColor:'#B71C1C'}">{{langs.menu[3]}}</div>
+</div>
+
+<div id="pool">
+
+<div class="poolbox">
+	<div class="onepool">
+		<div>ONE POOL</div>
+		<div>{{langs.poolstr[0]}}</div>
+	</div>
+	<div class="onesave">
+		<div class="onenum" style="color:#000000">{{poolnums[0]}}</div>
+		<div class="onebtnbox">
+			<button @click="poolbtn(0)">{{langs.btns[0]}}</button>
+		</div>
+		<div @click="copyURL(langs.reshex[0])" class="oneres">
+			{{langs.reshex[0]}}
+		</div>
+	</div>
+</div>
+
+<div class="poolbox">
+	<div class="onepool">
+		<div>TWO POOL</div>
+		<div>{{langs.poolstr[1]}}</div>
+	</div>
+	<div class="onesave">
+		<div class="onenum" style="color:#000000">{{poolnums[1]}}</div>
+		<div class="onebtnbox">
+			<button @click="poolbtn(1)">{{langs.btns[0]}}</button>
+		</div>
+		<div @click="copyURL(langs.reshex[1])" class="oneres">
+			{{langs.reshex[1]}}
+		</div>
+	</div>
+</div>
+
+<div class="poolbox">
+	<div class="onepool">
+		<div>THREE POOL</div>
+		<div>{{langs.poolstr[2]}}</div>
+	</div>
+	<div class="onesave">
+		<div class="onenum" style="color:#000000">{{poolnums[2]}}</div>
+		<div class="onebtnbox">
+			<button @click="poolbtn(2)">{{langs.btns[0]}}</button>
+		</div>
+		<div @click="copyURL(langs.reshex[2])" class="oneres">
+			{{langs.reshex[2]}}
+		</div>
+	</div>
+</div>
+
+<div class="boxs">
+	<div class="cbox">
+    <div class="fcbox">
+		<div class="contbox">
+		<div class="numbox">{{poolnums[3]}}</div>
+		<div class="lines">
+			{{langs.poolstr[3]}}
+		</div>
+		<div class="bnumbox">
+			<button @click="poolbtn(3)">{{langs.btns[1]}}</button>
+		</div>
+		<div @click="copyURL(langs.reshex[3])" class="resbox">{{langs.reshex[3]}}</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+</div>
+
+<div id="reward">
+<div>
+	<div class="usdtbtn">
+		<i class="fa fa-hand-o-right"></i><i class="fa fa-gift"></i><i class="fa fa-hand-o-left"></i>
+	</div>
+</div>
+<div class="rewardbox">
+	<div class="rewardpool">
+		<div>REWARD POOL</div>
+		<div style="text-align: left;padding-left: 20px;">Cumulative acceleration of new performance</div>
+		<div style="text-align: left;padding-left: 20px;">Left:{{addnumber[0]}}</div>
+		<div style="text-align: left;padding-left: 20px;">right:{{addnumber[1]}}</div>
+		<div></div>
+	</div>
+	
+</div>
+<div class="rewarbtns" style="text-align: center;">
+    <button @click="copyURL(dappdomain[1]+addhex[0])">我的推广连接</button>
+	<button @click="copyURL(dappdomain[1]+addhex[1])">左区推广连接</button>
+	<button @click="copyURL(dappdomain[1]+addhex[2])">右区推广连接</button>
+</div>
+</div>
+
+<div id="swap">
+<div>
+	<div class="usdtbtn">
+		<i class="fa fa-btc"></i><i class="fa fa-refresh"></i><i class="fa fa-money"></i>
+	</div>
+</div>
+
+<div class="swapbox">
+	<div class="swappool">
+		<div>USDPRO TO USDT PRICE</div>
+		<div>1 USDPRO = 1 USDT</div>
+	</div>
+	<div class="swapsave">
+		
+		<div class="swapbtnbox">
+			<button @click="poolbtn(4)">{{langs.btns[2]}}</button>
+		</div>
+		<div @click="copyURL(langs.reshex[4])" class="swapres">
+			{{langs.reshex[4]}}
+		</div>
+	</div>
+</div>
+
+<div class="swapbox">
+	<div class="swappool">
+		<div>USDPRO TO USDT PRICE</div>
+		<div>1 USDPTH = 1 USDPRO</div>
+	</div>
+	<div class="swapsave">
+		
+		<div class="swapbtnbox">
+			<button @click="poolbtn(5)">{{langs.btns[2]}}</button>
+		</div>
+		<div @click="copyURL(langs.reshex[5])" class="swapres">
+			{{langs.reshex[5]}}
+		</div>
+	</div>
+</div>
+
+<div class="swapbox">
+	<div class="swappool">
+		<div>USDPRO TO USDT PRICE</div>
+		<div>1 USDT = 1 USDPCN</div>
+	</div>
+	<div class="swapsave">
+		
+		<div class="swapbtnbox">
+			<button @click="poolbtn(6)">{{langs.btns[2]}}</button>
+		</div>
+		<div @click="copyURL(langs.reshex[6])" class="swapres">
+			{{langs.reshex[6]}}
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div id="infos">
+<div class="infobox">
+	<div class="infos">
+		<div>{{langs.accs[0]}}</div>
+		<div>{{langs.accs[1]}}:TFGSZrHwPPYc4Ui1Sssddw3v3sX7yidYPt</div>
+	</div>
+	<div class="yinfos">
+		<div>Your TRON</div>
+		<div>HEX:{{users.tron}}</div>
+		<div>USDT:{{contnumber[0]}}</div>
+		<div>USDPRO:{{contnumber[1]}}</div>
+		<div>USDPCN:{{contnumber[2]}}</div>
+		<div>USDPTH:{{contnumber[3]}}</div>
+	</div>
+</div>
+
+<div class="coinsbox">
+	<div>
+		<span>ONE POOL：</span>
+		<span>{{poolgets[0]}}</span>
+		<button @click="getpool('getone',0)">{{langs.btns[3]}}</button>
+	</div>
+</div>
+<div class="coinsbox">
+	<div>
+		<span>TWO POOL：</span>
+		<span>{{poolgets[1]}}</span>
+		<button @click="getpool('gettwo',1)">{{langs.btns[3]}}</button>
+	</div>
+</div>
+<div class="coinsbox">
+	<div>
+		<span>THREE POOL：</span>
+		<span>{{poolgets[2]}}</span>
+		<button @click="getpool('getthree',3)">{{langs.btns[3]}}</button>
+	</div>
+</div>
+<div class="coinsbox">
+	<div>
+		<span>FLOW POOL：</span>
+		<span>{{poolgets[3]}}</span>
+		<button @click="getpool('getflow',4)">{{langs.btns[3]}}</button>
+	</div>
+</div>
+
+</div>
+
+<div class="tail" style="height: 20px;width: 100%;"></div>
+</div>
+<script>
+const dappdomain = ["http://dapp.webit.cash/","http://dapp.webit.cash/index.html?t="];
+
+function isNumber(val){
+    let regPos = /^\d+(\.\d+)?$/; //非负浮点数
+    let regNeg = /^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$/; //负浮点数
+    if(regPos.test(val) || regNeg.test(val)){
+        return true;
+    }else{
+        return false;
+    }
+}
+function randomString(length) {
+    let str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let result = '';
+    for (let i = length; i > 0; --i) {
+        result += str[Math.floor(Math.random() * str.length)];
+    }
+	//result = Math.round(Math.random()*100000000)+(Math.random().toString(36).slice(-8));
+    return result;
+}
+function GetQueryString(t){
+	var reg = new RegExp("(^|&)"+ t +"=([^&]*)(&|$)");
+	var r = window.location.search.substr(1).match(reg);
+	if(r!=null)return  decodeURIComponent(r[2]); return null;
+}
+function copyURL(str)
+{
+    var oInput = document.createElement('input');
+    oInput.value = str;
+    document.body.appendChild(oInput);
+    oInput.select();
+    document.execCommand("Copy");
+    oInput.style.display = 'none';
+    document.body.removeChild(oInput);
+    //window.alert(app.order[1]);
+    hui.toast('ok');
+}
+window.ptron = GetQueryString('t');
+window.aeskey = '';
+window.getimes = null;
+function gettronweb(){
+    if(window.tronWeb && window.tronWeb.defaultAddress.base58){
+        //document.write("Yes, your tron:",window.tronWeb.defaultAddress.base58)
+		//alert('Yes, your tron:\n'+window.tronWeb.defaultAddress.base58);
+		app.users.tron = window.tronWeb.defaultAddress.base58;
+		
+		if(window.ptron == null){
+			window.ptron = '';
+		}
+		window.aeskey = randomString(8);
+		hui.postJSON(
+		    'http://dapp.webit.cash/sets.php',
+		    {tron:app.users.tron, aeskey:window.aeskey,url:'links',ptron:ptron},
+		    function(msg){
+		        //console.log(msg.rpc.twopool);
+				//let RFC = JSON.parse(msg);
+				let RFC = msg;
+				
+				if(RFC.result == 'none' || RFC.result == 'error' || RFC.result == 'fail'){
+					hui.iconToast(RFC.notes, 'warn');
+				}else if(RFC.result == 'success'){
+					hui.iconToast(RFC.notes, 'success');
+
+					Vue.set(app.poolnums,0,RFC.rpc.onepool*1);Vue.set(app.poolnums,1,RFC.rpc.twopool*1);
+					Vue.set(app.poolnums,2,RFC.rpc.threepool*1);Vue.set(app.poolnums,3,RFC.rpc.flowpool*1);
+					Vue.set(app.addnumber,0,RFC.rpc.anu);Vue.set(app.addnumber,1,RFC.rpc.bnu);
+					Vue.set(app.addhex,0,app.users.tron);
+					Vue.set(app.addhex,1,RFC.rpc.bhex);
+					Vue.set(app.addhex,1,RFC.rpc.bhex);
+					
+					getnumber();
+					
+					gettronumber(conthex[0],app.users.tron,0);
+					gettronumber(conthex[1],app.users.tron,1);
+					gettronumber(conthex[2],app.users.tron,2);
+					gettronumber(conthex[5],app.users.tron,3);
+					
+				}
+		    },
+		    function(e){
+		        hui.iconToast('error', 'warn');
+		    }
+		);
+    }else{
+		hui.iconToast('Please select TRON account', 'warn');
+	}
+}
+
+/////////////////////////////////////////////////////////
+async function gettronumber(tronhex,address,n){
+    try {
+        let getcontract = await window.tronWeb.contract().at(tronhex);
+        //Use call to execute a pure or view smart contract method.
+        // These methods do not modify the blockchain, do not cost anything to execute and are also not broadcasted to the network.
+        let getresult = await getcontract.balanceOf(address).call();
+        //console.log('result: ', result);
+    	//alert(result);
+		Vue.set(app.contnumber,n,getresult/dnumber[n]);
+		//contnumber[n] = result/dnumber[n];
+    } catch(error) {
+        //console.error("trigger smart contract error",error)
+    }
+}
+
+/////////////////////////////////////////////////////////
+function getpool(type,n){
+    if(window.tronWeb && window.tronWeb.defaultAddress.base58){
+        //document.write("Yes, your tron:",window.tronWeb.defaultAddress.base58)
+		//alert('Yes, your tron:\n'+window.tronWeb.defaultAddress.base58);
+		app.users.tron = window.tronWeb.defaultAddress.base58;
+		
+		//window.aeskey = randomString(8);
+		hui.postJSON(
+		    'http://dapp.webit.cash/sets.php',
+		    {tron:app.users.tron,url:type},
+		    function(msg){
+		        //console.log(msg);
+				//let RFC = JSON.parse(msg);
+				let RFC = msg;
+				
+				if(RFC.result == 'none' || RFC.result == 'error' || RFC.result == 'fail'){
+					hui.iconToast(RFC.notes, 'warn');
+				}else if(RFC.result == 'success'){
+					hui.iconToast(RFC.notes, 'success');
+
+					//Vue.set(app.poolnums,0,RFC.rpc.onepool*1);Vue.set(app.poolnums,1,RFC.rpc.twopool*1);
+					//Vue.set(app.poolnums,2,RFC.rpc.threepool*1);Vue.set(app.poolnums,3,RFC.rpc.flowpool*1);
+					
+					Vue.set(app.poolgets,n,0);
+					
+				}
+		    },
+		    function(e){
+		        hui.iconToast('error', 'warn');
+		    }
+		);
+    }
+}
+/////////////////////////////////////////////////////////
+function getnumber(){
+    if(window.tronWeb && window.tronWeb.defaultAddress.base58){
+        //document.write("Yes, your tron:",window.tronWeb.defaultAddress.base58)
+		//alert('Yes, your tron:\n'+window.tronWeb.defaultAddress.base58);
+		app.users.tron = window.tronWeb.defaultAddress.base58;
+		
+		//window.aeskey = randomString(8);
+		hui.postJSON(
+		    'http://dapp.webit.cash/gets.php',
+		    {tron:app.users.tron,url:'getnumber'},
+		    function(msg){
+		        //console.log(msg);
+				//let RFC = JSON.parse(msg);
+				let RFC = msg;
+				
+				if(RFC.result == 'none' || RFC.result == 'error' || RFC.result == 'fail'){
+					//hui.iconToast(RFC.notes, 'warn');
+				}else if(RFC.result == 'success'){
+					//hui.iconToast(RFC.notes, 'success');
+	
+					Vue.set(app.poolgets,0,Math.round(RFC.rpc.one*10000000000)/10000000000);
+					Vue.set(app.poolgets,1,Math.round(RFC.rpc.two*10000000000)/10000000000);
+					Vue.set(app.poolgets,2,Math.round(RFC.rpc.three*10000000000)/10000000000);
+					Vue.set(app.poolgets,3,Math.round(RFC.rpc.flow*10000000000)/10000000000);
+					
+				}
+		    },
+		    function(e){
+		        //hui.iconToast('error', 'warn');
+		    }
+		);
+    }
+}
+/////////////////////////////////////////////////////////
+const langcn = {
+	setlang:'English',
+	top:['波场矿场','开始挖矿'],
+	accs:['我们的USDT总池','波址','总量'],
+	menu:['矿场',"奖励","兑换","钱包"],
+	btns:['炼矿','赎回','兑换','铸币'],
+	poolstr:['产USDPTH','产USDPTH','产USDPTH','FLOW POOL'],
+	reshex:['复制结果','复制结果','复制结果','复制结果','复制结果','复制结果','复制结果'],
+};
+const langen = {
+	setlang:'繁体',
+	top:['TRON of POOL','START MINING'],
+	accs:['ours USDT POOL:','HEX','SUM'],
+	menu:['POOL','REWARD','SWAP','WALLET'],
+	btns:['POOL','RANSOM','SWAP','GET'],
+	poolstr:['output USDPTH','output USDPTH','output USDPTH','FLOW POOL'],
+	reshex:['result Copy','result Copy','result Copy','result Copy','result Copy','result Copy','result Copy'],
+};
+const app = new Vue({
+  el: '#app',
+  data: {
+  	langs:langen,
+	users:{tron:''},
+	poolins:[null,null,null,null,null,null,null],
+	poolnums:[0,0,0,0],
+	poolgtm:[0,0,0,0],
+	poolgets:[0,0,0,0],
+	speed:[0.01,0.015,0.01,0],
+	contnumber:[0,0,0,0],
+	addnumber:[0,0],
+	addhex:['','','']
+  }
+});
+
+hui('#langbtn').click(function(){
+    if(app.langs.setlang == "繁体"){
+		app.langs = langcn;
+	}else{
+		app.langs = langen;
+	}
+});
+
+
+//////////////////////////////////////
+$("#reward").hide();
+$("#swap").hide();
+$("#infos").hide();
+
+const menustr = ["#pool","#reward","#swap","#infos"];
+function menushow(n){
+	$("#pool").hide();$("#reward").hide();$("#swap").hide();$("#infos").hide();
+	
+	$(menustr[n]).fadeIn();
+	$(menustr[n]).fadeIn("slow");
+	$(menustr[n]).fadeIn(3000);
+}
+//////////////////////////////////////
+
+const tronhex = [
+	'TFGSZrHwPPYc4Ui1Sssddw3v3sX7yidYPt','TFGSZrHwPPYc4Ui1Sssddw3v3sX7yidYPt','TFGSZrHwPPYc4Ui1Sssddw3v3sX7yidYPt','TFGSZrHwPPYc4Ui1Sssddw3v3sX7yidYPt',
+	'TFGSZrHwPPYc4Ui1Sssddw3v3sX7yidYPt','TFGSZrHwPPYc4Ui1Sssddw3v3sX7yidYPt','TFGSZrHwPPYc4Ui1Sssddw3v3sX7yidYPt'
+];
+const conthex = [
+	'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t','TWn582kcCrGdT2gMk2xCte9Zv6ivn1CWSC','TFm1ykFDZXTQVsgvoSiYJZn5AAZSYunXWi','TWn582kcCrGdT2gMk2xCte9Zv6ivn1CWSC',
+	'TWn582kcCrGdT2gMk2xCte9Zv6ivn1CWSC','TFi6pfwuihuUaFHyo1P7YcK4hkmnvVSVnN','TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t'
+];
+const dnumber = [
+	1000000,1000000000000000000,1000000000000000000,1000000000000000000,
+	1000000000000000000,1000000000000000000,1000000
+];
+//const contnumber = [0,0,0,0];
+const funstr = ['fone','ftwo','fthree','fflow','susdt','susdpro','susdpcn'];
+const objs = [null,null,null,null,null,null,null];
+const coinsign = ['usdt','usdpro','usdpcn','usdpro','usdpro','usdpth','usdt'];
+
+window.reshex = '';
+window.nums = 0;
+
+function poolbtn(n){
+	let strs = 'please enter your ' + coinsign[n];
+	hui.prompt(strs, ['cancel','ok'], function(name){
+	    app.poolins[n] = name;
+		poolsend(n);
+	}, '', '' ,function(){});
+}
+
+function poolsend(n){
+	if(!isNumber(app.poolins[n])){
+		hui.toast('no number');return;
+	}
+	
+	if(app.poolins[n] < 0){
+		hui.toast('number < 0');return;
+	}
+    
+	window.inums = app.poolins[n] * dnumber[n];
+	window.inums = window.inums.toString();
+	window.trons = tronhex[n];
+	window.conts = conthex[n];
+	window.nums = n;
+	window.fstr = funstr[n];
+	
+	objs[n] = setInterval(async ()=>{
+		
+	    if (window.tronWeb && window.tronWeb.defaultAddress.base58) {
+	        clearInterval(objs[n]);
+	        var tronweb = window.tronWeb;
+			
+			const trc20ContractAddress = window.conts;//contract address
+			//var address = "TM2TmqauSEiRf16CyFgzHV2BVxBe...";
+			
+			try {
+			    let contract = await tronWeb.contract().at(trc20ContractAddress);
+			    let result = await contract.transfer(
+			        window.trons, //address _to
+			        window.inums  //amount
+			    ).send({
+			        feeLimit: 10000000 //10trx
+			    }).then(output => {
+					//alert('Output:'+output+'\n');
+					//copyURL(output);
+					window.reshex = output;
+					app.langs.reshex[window.nums] = output;
+					
+					//alert('Output:'+window.reshex+'\n');
+					//alert('Output:'+app.langs.reshex[window.nums]+'\n');
+					//hui.iconToast('send ok', 'success');
+					
+					hui.post(
+					    'http://dapp.webit.cash/sets.php',
+					    {tron:window.tronWeb.defaultAddress.base58, aeskey:window.aeskey,url:window.fstr,reshex:window.reshex,sum:window.inums},
+					    function(msg){
+					        //console.log(msg);
+							let RFC = JSON.parse(msg);
+							//let RFC = msg;
+							
+							if(RFC.result == 'none' || RFC.result == 'error' || RFC.result == 'fail'){
+								hui.iconToast(RFC.notes, 'warn');
+							}else if(RFC.result == 'success'){
+								hui.iconToast(RFC.notes, 'success');
+								//gettronweb();
+							}
+					    },
+					    function(e){
+					        hui.iconToast('result error', 'warn');
+					    }
+					);
+					
+				});
+			} catch(error) {
+			    //alert("trigger smart contract error"+error)
+			}
+	    }
+	}, 10);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+
+body{
+	background-color: #263238;background-image: radial-gradient(#607D8B, #263238, #000000);
+}
+
+.langbtn{
+	text-align: right;width: 95%;
+}
+.langbtn span{
+	color: #FFFFFF;height: 40px;line-height: 40px;
+}
+
+.toplogo{
+	width: 100%;
+	text-align: center;color: #FFFFFF;text-shadow: 3px 3px 3px #BF360C;
+	line-height: 30px;font-size: 30px;margin-bottom: 10px;
+}
+.startbox{
+	width: 100%;margin-bottom: 20px;
+	text-align: center;border-top: 1px solid #FFFFFF;border-bottom: 1px solid #FFFFFF;
+}
+.startbox i{
+	color: #FFFFFF;
+	font-size: 20px;line-height: 50px;
+}
+.startbtn{
+	width: 50%;margin: auto;
+	
+}
+.startbtn span{
+	font-size: 20px;line-height: 50px;
+	color: #FFFFFF;
+}
+/*******************************************************************************************************/
+
+.menubox{
+	width: 95%;margin: auto;
+	border: 1px solid #FFFFFF;
+}
+.menubox div{
+	width: 25%;float: left;text-align: center;color: #FFFFFF;
+	height: 40px;line-height: 40px;
+}
+#menupool{background-color: #263238;color: #FFFFFF;font-weight: bold;}
+#menureward{background-color: #90A4AE;color: #000000;font-weight: bold;}
+#menuswap{background-color: #263238;color: #FFFFFF;font-weight: bold;}
+#menuinfos{background-color: #90A4AE;color: #000000;font-weight: bold;}
+/*******************************************************************************************************/
+.usdtbtn{
+	width: 100%;text-align: center;
+}
+.usdtbtn i{
+	color: #FFFFFF;font-size: 30px;line-height: 70px;text-align: center;text-shadow: 3px 3px 3px #BF360C;
+}
+.usdtbtn i:first-child{
+	margin-right: 10px;
+}
+.usdtbtn i:last-child{
+	margin-left: 10px;
+}
+/*******************************************************************************************************/
+.title{
+	height: 100px;line-height: 100px;font-size: 30px;
+	text-align: center;color: #FFFFFF;
+}
+.boxs{
+	width: 100%;margin: auto;
+	height: 250px;width: 250px;
+	margin-top:10px;margin-bottom: 30px;
+	
+	transform: rotate(45deg);
+	overflow: hidden;
+}
+.cbox{
+	width: 100%;margin: auto;
+	height: 250px;width: 250px;
+	background-color: #37474F;
+	transform: rotate(45deg);
+	overflow: hidden;
+}
+.fcbox{
+	width: 100%;margin: auto;
+	height: 250px;width: 250px;
+	transform: rotate(-90deg);
+	overflow: hidden;
+}
+.contbox{
+	width: 100%;margin: auto;
+	
+}
+.numbox{
+	height: 50px;line-height: 50px;
+	text-align: center;
+	background-image: linear-gradient(to bottom,#CFD8DC,#90A4AE);
+}
+.bnumbox{
+	height: 50px;line-height: 50px;
+	text-align: center;
+	background-color: #455A64;
+}
+.gnumbox{
+	height: 50px;line-height: 50px;
+	text-align: center;
+}
+.lines{
+	width: 100%;height: 50px;line-height: 50px;text-align: center;
+	background-image: linear-gradient(to top,#546E7A,#78909C);
+}
+.resbox{
+	height: 50px;line-height: 50px;
+	text-align: center;color: #FFFFFF;
+	background-image: linear-gradient(to top,#000000,#263238);
+}
+/*******************************************************************************************************/
+.poolbtn{
+	width: 90%;margin: auto;margin-top: 10px;margin-bottom: 20px;
+	
+}
+.poolbtnone{
+	width: 150px;height: 150px;margin: 10px 0px 10px 0px;
+	float: left;border-radius: 5px;
+	border: 1px solid #FFFFFF;
+	background: linear-gradient(to top,rgba(255,255,255,0.3),rgba(0,0,0,0.3));
+}
+.poolbtnone div:first-child{
+	width: 100px;height: 100px;line-height: 100px;text-align: center;margin: auto;margin-top: 25px;
+	border-radius: 50px;font-weight: bold;font-size: 20px;color: #FFFFFF;
+	background: linear-gradient(to top,rgba(0,0,0,0.7),rgba(255,255,255,0.1));
+}
+.poolbtntwo{
+	width: 150px;height: 150px;margin: 10px 0px 10px 0px;
+	float: right;border-radius: 5px;
+	border: 1px solid #FFFFFF;
+	background: linear-gradient(to top,rgba(255,255,255,0.3),rgba(0,0,0,0.3));
+}
+.poolbtntwo div:first-child{
+	width: 100px;height: 100px;line-height: 100px;text-align: center;margin: auto;margin-top: 25px;
+	border-radius: 50px;font-weight: bold;font-size: 20px;color: #FFFFFF;
+	background: linear-gradient(to top,rgba(0,0,0,0.7),rgba(255,255,255,0.1));
+}
+/*******************************************************************************************************/
+.poolbox{
+	width: 90%;margin: auto;
+	
+	margin-bottom: 10px;border-radius: 10px;
+}
+.onepool{
+	width: 100%;margin: auto;padding-top: 10px;padding-bottom: 10px;
+	
+}
+.onepool div{
+	color: #FFFFFF;line-height: 30px;text-align: center;
+}
+.onepool div:first-child{
+	font-size: 30px;line-height: 60px;font-weight: bold;
+}
+.onesave{
+	width: 90%;margin: auto;background-color: rgba(0,0,0,0.3);
+	border: 1px solid #FFFFFF;
+}
+.onesave div{
+	color: #FFFFFF;
+}
+.onenum{
+	text-align: center;line-height: 50px;color: #FFFFFF;
+}
+.onenumi{
+	text-align: center;line-height: 30px;color: #FFFFFF;
+}
+.onebtnbox{
+	text-align: center;
+}
+.onebtnbox button{
+	width: 25%;
+}
+.oneres{
+	background-color: #000000;margin-top: 10px;text-align: center;line-height: 30px;
+}
+/*******************************************************************************************************/
+.swapbox{
+	width: 95%;margin: auto;
+	border: 1px solid #FFFFFF;
+	margin-bottom: 10px;border-radius: 10px;
+}
+.swappool{
+	width: 100%;margin: auto;padding-top: 10px;padding-bottom: 10px;
+}
+.swappool div{
+	color: #FFFFFF;line-height: 30px;text-align: center;
+}
+.swapsave{
+	width: 100%;margin: auto;
+	background-color: rgba(0,0,0,0.3);
+}
+.swapsave div{
+	color: #FFFFFF;
+}
+.swapnum{
+	text-align: center;line-height: 30px;color: #000000;
+}
+.swapbtnbox{
+	text-align: center;padding-top: 10px;padding-bottom: 20px;
+}
+.swapbtnbox button{
+	width: 25%;
+}
+.swapres{
+	background-color: #000000;margin-top: 10px;text-align: center;line-height: 30px;
+}
+
+
+/*******************************************************************************************************/
+.rewardbox{
+	width: 95%;margin: auto;
+	border: 1px solid #FFFFFF;
+	margin-bottom: 10px;border-radius: 10px;
+}
+.rewardpool{
+	width: 100%;margin: auto;
+	background-color:rgba(255,255,255,0.1);border-radius: 10px;
+}
+.rewardpool div{
+	color: #FFFFFF;line-height: 30px;text-align: center;
+}
+.rewarbtns{
+	width: 95%;margin: auto;text-align: center;padding-top: 10px;
+	display: flex;
+	flex-direction:row;
+	justify-content:space-around;
+	align-items:center;
+}
+/*******************************************************************************************************/
+.infobox{
+	width: 100%;
+}
+.infos{
+	width: 90%;margin: auto;padding: 10px;margin-top: 10px;
+	border-radius: 10px;
+	background-color: #37474F;
+}
+.infos div{
+	color: #FFFFFF;line-height: 30px;
+}
+.yinfos{
+	width: 90%;margin: auto;padding: 10px;margin-top: 20px;
+	border-radius: 10px;border: 1px solid #FFFFFF;
+	
+}
+.yinfos div{
+	color: #FFFFFF;line-height: 30px;
+}
+/*******************************************************************************************************/
+

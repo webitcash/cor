@@ -1,0 +1,226 @@
+
+body{
+	background-color: #263238;
+}
+
+.langbtn{
+	text-align: right;width: 95%;
+}
+.langbtn span{
+	color: #FFFFFF;height: 40px;line-height: 40px;
+}
+
+.toplogo{
+	width: 100%;
+	text-align: center;color: #FFFFFF;text-shadow: 3px 3px 3px #BF360C;
+	line-height: 30px;font-size: 30px;margin-bottom: 10px;
+}
+.startbox{
+	width: 100%;background-color: #3E2723;margin-bottom: 10px;
+	text-align: center;box-shadow: 3px 3px 3px #212121;
+}
+.startbox i{
+	color: #FFFFFF;
+	font-size: 20px;line-height: 50px;
+}
+.startbtn{
+	width: 50%;margin: auto;
+	background-color: #4E342E;
+}
+.startbtn span{
+	font-size: 20px;line-height: 50px;
+	color: #FFFFFF;
+}
+/*******************************************************************************************************/
+
+.menubox{
+	width: 95%;margin: auto;padding: 10px;
+	
+}
+.menubox div{
+	width: 25%;float: left;text-align: center;color: #FFFFFF;
+	height: 40px;line-height: 40px;
+}
+/*******************************************************************************************************/
+.infobox{
+	width: 100%;
+}
+.infos{
+	width: 90%;margin: auto;padding: 10px;margin-top: 10px;
+	border-radius: 10px;
+	background-color: #37474F;
+}
+.infos div{
+	color: #FFFFFF;line-height: 30px;
+}
+.yinfos{
+	width: 90%;margin: auto;padding: 10px;margin-top: 20px;
+	border-radius: 10px;border: 1px solid #455A64;
+	
+}
+.yinfos div{
+	color: #FFFFFF;line-height: 30px;
+}
+/*******************************************************************************************************/
+.usdtbtn{
+	width: 100%;text-align: center;
+}
+.usdtbtn i{
+	color: #FFFFFF;font-size: 30px;line-height: 70px;text-align: center;text-shadow: 3px 3px 3px #BF360C;
+}
+.usdtbtn i:first-child{
+	margin-right: 10px;
+}
+.usdtbtn i:last-child{
+	margin-left: 10px;
+}
+/*******************************************************************************************************/
+.boxs{
+	width: 100%;margin: auto;
+	height: 250px;width: 250px;
+	margin-top:50px;margin-bottom: 50px;
+	
+	transform: rotate(45deg);
+	overflow: hidden;
+}
+.cbox{
+	width: 100%;margin: auto;
+	height: 250px;width: 250px;
+	background-image: radial-gradient(at 50px 50px,#FFF3E0,#01579B);
+	transform: rotate(45deg);
+	overflow: hidden;
+}
+.fcbox{
+	width: 100%;margin: auto;
+	height: 250px;width: 250px;
+	transform: rotate(-90deg);
+	overflow: hidden;
+}
+.contbox{
+	width: 100%;margin: auto;
+	background-color: #000000;
+	margin-top:50px;
+}
+.numbox{
+	height: 50px;line-height: 50px;
+	text-align: center;
+	background-color: #03A9F4;#FF9800
+}
+.bnumbox{
+	height: 50px;line-height: 50px;
+	text-align: center;
+	background-color: #FF9800;
+}
+.lines{
+	width: 100%;height: 50px;line-height: 50px;text-align: center;
+	background-image: linear-gradient(to right,#01579B,#E1F5FE);
+}
+.resbox{
+	height: 50px;line-height: 50px;
+	text-align: center;color: #B3E5FC;
+	background-image: radial-gradient(at 50px 50px,#01579B,#FFF3E0);
+}
+/*******************************************************************************************************/
+.poolbox{
+	width: 70%;margin: auto;
+	border: 1px solid #E65100;
+	margin-bottom: 10px;border-radius: 10px;
+}
+.onepool{
+	width: 100%;margin: auto;padding-top: 10px;padding-bottom: 10px;
+	background-color: #E65100;
+}
+.onepool div{
+	color: #FFFFFF;line-height: 30px;text-align: center;
+}
+.onesave{
+	width: 100%;margin: auto;
+	background-color: #FFE0B2;
+}
+.onesave div{
+	color: #FFFFFF;
+}
+.onenum{
+	text-align: center;line-height: 100px;color: #000000;
+}
+.onebtnbox{
+	text-align: center;
+}
+.onebtnbox button{
+	width: 25%;
+}
+.oneres{
+	background-color: #FF9800;margin-top: 10px;text-align: center;line-height: 30px;
+}
+/*******************************************************************************************************/
+.swapbox{
+	width: 70%;margin: auto;
+	border: 1px solid #0D47A1;
+	margin-bottom: 10px;border-radius: 10px;
+}
+.swappool{
+	width: 100%;margin: auto;padding-top: 10px;padding-bottom: 10px;
+	background-color: #0D47A1;
+}
+.swappool div{
+	color: #FFFFFF;line-height: 30px;text-align: center;
+}
+.swapsave{
+	width: 100%;margin: auto;
+	background-color: #90CAF9;
+}
+.swapsave div{
+	color: #FFFFFF;
+}
+.swapnum{
+	text-align: center;line-height: 100px;color: #000000;
+}
+.swapbtnbox{
+	text-align: center;padding-top: 30px;padding-bottom: 20px;
+}
+.swapbtnbox button{
+	width: 25%;
+}
+.swapres{
+	background-color: #2196F3;margin-top: 10px;text-align: center;line-height: 30px;
+}
+
+
+/*******************************************************************************************************/
+.rewardbox{
+	width: 95%;margin: auto;
+	border: 1px solid #1B5E20;
+	margin-bottom: 10px;border-radius: 10px;
+}
+.rewardpool{
+	width: 100%;margin: auto;
+	background-color:#1B5E20;border-radius: 10px;
+	box-shadow: 3px 3px 3px #1B5E20;
+}
+.rewardpool div{
+	color: #FFFFFF;line-height: 30px;text-align: center;
+}
+.rewarbtns{
+	width: 95%;margin: auto;text-align: center;padding-top: 10px;
+	display: flex;
+	flex-direction:row;
+	justify-content:space-around;
+	align-items:center;
+}
+/*******************************************************************************************************/
+.coinsbox{
+	width: 100%;margin-top: 10px;margin-bottom: 10px;
+}
+.coinsbox div{
+	background-color: #3E2723;
+	width: 90%;margin: auto;padding: 10px 10px 0px 10px;
+}
+.coinsbox div span{
+	color: #FFFFFF;
+}
+.coinsbox div button{
+	width: 20%;float: right;
+}
+.coinsbox div:last-child{
+	padding-bottom: 10px;
+}
